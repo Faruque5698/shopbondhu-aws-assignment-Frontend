@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopBondhu - Your Everyday Shopping Companion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Bar Announcement -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span>🎉 Welcome to ShopBondhu! Enjoy free delivery on orders over ৳1,000!</span>
+      <div class="top-bar-links">
+        <a href="#help">Help & Support</a>
+        <span>|</span>
+        <a href="#track">Track Order</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container navbar-content">
+      <div class="logo">
+        <span class="logo-icon">🛍️</span>
+        <h1>Shop<span>Bondhu</span></h1>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search for electronics, fashion, groceries..." id="searchInput">
+        <button type="button" id="searchBtn">Search</button>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#account" class="nav-item">
+          <span class="nav-icon">👤</span>
+          <span>Account</span>
+        </a>
+        <a href="#cart" class="nav-item cart-btn" id="cartButton">
+          <span class="nav-icon">🛒</span>
+          <span class="cart-label">Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="sub-nav">
+    <div class="container sub-nav-content">
+      <a href="#all" class="active">All Categories</a>
+      <a href="#electronics">Electronics</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#home">Home & Living</a>
+      <a href="#gadgets">Gadgets</a>
+      <a href="#deals">Flash Deals 🔥</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge">AWS Cloud Powered</span>
+        <h2>Connecting Buyers with the Best Deals in Bangladesh</h2>
+        <p>Experience ultra-fast, reliable e-commerce hosting powered by secure AWS VPC architecture and Nginx web servers.</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Shop Now</a>
+          <a href="#architecture" class="btn btn-secondary">System Info</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="cloud-status-card">
+          <div class="status-header">
+            <span class="status-indicator"></span>
+            <h3>AWS Cloud Health</h3>
+          </div>
+          <div class="status-item">
+            <span>Server:</span>
+            <strong>Nginx Web Server</strong>
+          </div>
+          <div class="status-item">
+            <span>Environment:</span>
+            <strong>shopbondhu-vpc (Public Subnet)</strong>
+          </div>
+          <div class="status-item">
+            <span>Security:</span>
+            <strong>Protected by Security Groups</strong>
+          </div>
+          <div class="status-item">
+            <span>Status:</span>
+            <span class="badge-success">Operational 100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Propositions / Features -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h4>Lightning Fast</h4>
+        <p>Optimized Nginx reverse proxy delivering sub-second response times.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h4>Secure Architecture</h4>
+        <p>Isolated backend in private subnet with outbound-only NAT gateway.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h4>Express Delivery</h4>
+        <p>Next day delivery across all 64 districts in Bangladesh.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h4>Easy 7-Day Returns</h4>
+        <p>Hassle-free money back guarantee on all verified purchases.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h3>Trending Products</h3>
+          <p>Hand-picked bestsellers ready for express checkout</p>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="electronics">Electronics</button>
+          <button class="filter-btn" data-filter="gadgets">Gadgets</button>
+          <button class="filter-btn" data-filter="fashion">Fashion</button>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Products injected via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud Infrastructure Info Banner -->
+  <section class="infra-banner" id="architecture">
+    <div class="container infra-content">
+      <div class="infra-badge">DevOps Infrastructure Spotlight</div>
+      <h3>Designed with AWS Multi-Tier VPC Best Practices</h3>
+      <p>ShopBondhu frontend runs on a public EC2 instance exposed through an Internet Gateway, while sensitive backend services run securely isolated in a private subnet using a NAT Gateway for outbound patch management.</p>
+      <div class="infra-tags">
+        <span>VPC: 10.0.0.0/16</span>
+        <span>Public Subnet: Frontend / Nginx</span>
+        <span>Private Subnet: Isolated Backend</span>
+        <span>NAT Gateway: Outbound Access</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="logo">
+          <span class="logo-icon">🛍️</span>
+          <h2>Shop<span>Bondhu</span></h2>
+        </div>
+        <p>Your reliable online shopping destination in Bangladesh. Powered by modern cloud infrastructure.</p>
+        <p class="copyright">© 2026 ShopBondhu. Built for Ostad DevOps Module 3 Assignment.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#products">All Products</a></li>
+          <li><a href="#deals">Flash Deals</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Infrastructure Details</h5>
+        <ul>
+          <li>Assignment: Ostad Module 3</li>
+          <li>VPC: shopbondhu-vpc</li>
+          <li>Web Server: Nginx (Ubuntu)</li>
+          <li>Cloud: Amazon Web Services (AWS)</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact & Support</h5>
+        <p>Email: support@shopbondhu.local</p>
+        <p>Hotline: 09612-SHOP-BONDHU</p>
+        <p>Dhaka, Bangladesh</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
